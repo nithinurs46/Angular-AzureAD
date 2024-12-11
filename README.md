@@ -27,15 +27,16 @@ For the test and production environments, create a ConfigMap in Rancher that con
 - Goto configMap, Create new config map, provide name as frontend-config, key as config.json and value should contain the required json with clientId, authority, postLogoutUrl, backendUrl, and redirectUri
 
 Goto deployment.tmpl and define a volume 
-  volumes:
-        - configMap:
-            defaultMode: 420
-            name: frontend-config
-            items:
-            - key: config.json
-              path: config.json
-            optional: false
-          name: app-vol
+volumes:
+  - configMap:
+      defaultMode: 420
+      name: frontend-config
+      items:
+        - key: config.json
+          path: config.json
+      optional: false
+    name: app-vol
+
 
 then define a volume mount -
 
