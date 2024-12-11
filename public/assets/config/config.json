@@ -1,0 +1,8 @@
+{
+    "production": false,
+    "postLogoutUrl": "http://localhost:4200/",
+    "clientId": "",
+    "redirectUri": "http://localhost:4200/",
+    "authority": "",
+    "backendUrl": "http://localhost:8080/"
+}
